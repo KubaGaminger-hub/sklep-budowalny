@@ -55,10 +55,10 @@ li {
 .menu {
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
     width: 20%;
     height: 50%;
     background-color: #EAEBEC;
+    border: 2px solid #EAEBEC;
 }
 
 .menu select, .menu input {
