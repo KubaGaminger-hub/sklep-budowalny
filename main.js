@@ -58,21 +58,21 @@ plytki.forEach(function(plytka){
 select.addEventListener('change', function(){
     plytki.forEach(function(plytka) {
         if (plytka.name == select.value){
-                img.src = plytka.img;
-                img.alt = plytka.name;
-                img.title = plytka.description;
-                cena.innerText = plytka.price * metry.value;
+            img.src = plytka.img;
+            img.alt = plytka.name;
+            img.title = plytka.description;
+            cena.innerText = `${plytka.price * metry.value} zł`;
         }
     })  
 })
 
-metry.addEventListener('change', () =>{
+metry.addEventListener('input', () =>{
     plytki.forEach(function(plytka) {
         if (plytka.name == select.value){
             img.src = plytka.img;
             img.alt = plytka.name;
             img.title = plytka.description;
-            cena.innerText = plytka.price * metry.value;
+            cena.innerText = `${plytka.price * metry.value} zł`;
         }
     })    
 })
