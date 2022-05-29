@@ -35,6 +35,8 @@ const plytki = [
     },
 ]
 
+// Wyświetlanie ceny i metrów
+
 window.onload = () => {
     if (select.value != null){
         plytki.forEach(function(plytka) {
@@ -48,12 +50,16 @@ window.onload = () => {
     }
 }
 
+// Dodawanie opcji do selecta
+
 plytki.forEach(function(plytka){
     const option = document.createElement('option');
     option.value = plytka.name;
     option.innerText = plytka.name;
     select.appendChild(option);
 })
+
+// Dodanie eventu do selecta
 
 select.addEventListener('change', function(){
     plytki.forEach(function(plytka) {
@@ -66,12 +72,11 @@ select.addEventListener('change', function(){
     })  
 })
 
+// Dodanie eventu do inputu
+
 metry.addEventListener('input', () =>{
     plytki.forEach(function(plytka) {
         if (plytka.name == select.value){
-            img.src = plytka.img;
-            img.alt = plytka.name;
-            img.title = plytka.description;
             cena.innerText = `${plytka.price * metry.value} zł`;
         }
     })    
