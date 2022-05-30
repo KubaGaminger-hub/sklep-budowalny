@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+:root {
+  --font-logo: "Anton", sans-serif;
+  --font-main: "Source Code Pro", monospace;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  font-family: var(--font-logo);
+  background-color: #0078D7;
+  text-shadow: 4px 3px 5px rgb(48, 48, 53);
+}
+
+nav {
+  font-family: var(--font-main);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #0078D7;
+  color: white;
+}
+
+nav ul {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  list-style-type: none;
+  margin: 0 100px;
+  margin-top: 20px;
+}
+
+li {
+  list-style-position: inside;
+}
+
+/* main {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+} */
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  height: 50%;
+  background-color: #EAEBEC;
+  border: 2px solid #EAEBEC;
+}
+
+.menu select, .menu input {
+  width: 50%;
+}
+
+.wrapper-menu {
+  flex-grow: 2;
+  width: 100%;
+  display: flex;
+}
+
+#cena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  background-color: #FFDC00;
+  width: 100%;
+  flex-grow: 1;
+}
+
+.wrapper-koszyk {
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+}
+
+.koszykText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.koszykText p {
+  background-color: #FFDC00;
+  padding: 10px;
+  color: #0078D7;
+  font-weight: 700;
+}
+
+.koszykText p:hover {
+  cursor: pointer;
+}
+
+.mainMenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.zegarek {
+  position: absolute;
+  margin-left: 1%;
+  margin-top: 1%;
+  color: white;
+  text-shadow: 6px 5px 4px rgb(48, 48, 53);
+}/*# sourceMappingURL=style.css.map */

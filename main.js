@@ -2,6 +2,7 @@ const select = document.querySelector('select');
 const img = document.querySelector('img');
 const cena = document.querySelector('#cena');
 const metry = document.querySelector('#metry');
+const zegarek = document.querySelector('.zegarek')
 const plytki = [
     jasnaPlytka= {
         name: 'Jasna plytka',
@@ -34,6 +35,12 @@ const plytki = [
         description: 'Niebieska plytka z kolorowymi kreskami'
     },
 ]
+
+// zegarek
+
+setInterval(() => {
+    zegarek.innerText = new Date().toLocaleTimeString()
+}, 1000);
 
 // Wyświetlanie ceny i metrów
 
@@ -81,3 +88,4 @@ metry.addEventListener('input', () =>{
         }
     })    
 })
+
