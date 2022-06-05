@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const select = document.querySelector('select');
     const img = document.querySelector('img');
-    const cena = document.querySelector('#cena');
+    const cena = document.querySelector('.cena');
     const metry = document.querySelector('#metry');
     const zegarek = document.querySelector('.zegarek')
     const plytki = [

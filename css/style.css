@@ -12,7 +12,10 @@
 
 body {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -25,6 +28,11 @@ header {
   text-shadow: 4px 3px 5px rgb(48, 48, 53);
 }
 
+.zegarek {
+  color: white;
+  text-shadow: 6px 5px 4px rgb(48, 48, 53);
+}
+
 nav {
   font-family: var(--font-main);
   width: 100%;
@@ -34,101 +42,79 @@ nav {
   background-color: #0078D7;
   color: white;
 }
-
 nav ul {
   justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
-
-nav ul li {
+nav li {
   list-style-type: none;
   margin: 0 100px;
   margin-top: 20px;
-}
-
-li {
   list-style-position: inside;
 }
-
-/* main {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-} */
-.container {
-  height: 100%;
-  width: 100%;
-  display: flex;
+nav .fa-cart-shopping {
+  transform: scale(2);
 }
 
-.menu {
+.main {
+  flex-grow: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.container .menu {
+  display: flex;
+  width: 20%;
+  height: 100%;
+  background-color: gold;
+  flex-direction: column;
+}
+.container .mainMenu {
   display: flex;
   flex-direction: column;
-  width: 20%;
-  height: 50%;
-  background-color: #EAEBEC;
-  border: 2px solid #EAEBEC;
+  flex-grow: 3;
+  background-color: gold;
+  width: 100%;
+  align-items: center;
 }
-
-.menu select, .menu input {
+.container .cena {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  background-color: rgb(208, 208, 208);
+}
+.container .koszyk {
+  display: flex;
   width: 50%;
-}
-
-.wrapper-menu {
-  flex-grow: 2;
-  width: 100%;
-  display: flex;
-}
-
-#cena {
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: red;
-  background-color: #FFDC00;
-  width: 100%;
-  flex-grow: 1;
+  align-self: center;
+  background-color: white;
+  padding: 1px;
+  border-radius: 5px;
+  flex-grow: 0.1;
+  margin-bottom: 3%;
 }
-
-.wrapper-koszyk {
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-}
-
-.koszykText {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.koszykText p {
-  background-color: #FFDC00;
-  padding: 10px;
-  color: #0078D7;
-  font-weight: 700;
-}
-
-.koszykText p:hover {
+.container .koszyk:hover {
   cursor: pointer;
 }
-
-.mainMenu {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.container img {
+  height: 500px;
 }
 
-.zegarek {
-  position: absolute;
-  margin-left: 1%;
-  margin-top: 1%;
+footer {
+  width: 100%;
+  height: 5%;
+  background-color: #0078D7;
   color: white;
-  text-shadow: 6px 5px 4px rgb(48, 48, 53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

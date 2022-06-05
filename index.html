@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/5b543ec1e0.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="zegarek">
-        
-    </div>
+
     <header>
         <h1>castodrama</h1>
     </header>
@@ -20,6 +19,7 @@
             <li>O nas</li>
             <li>Kontakt</li>
         </ul>
+        <i class="fa-solid fa-cart-shopping"></i>
     </nav>
     <!-- <main> -->
         <!-- Gres szkliwiony polerowany Lexington Ceramstic 60 x 60 cm dark grey 1,44 m2  -->
@@ -27,29 +27,27 @@
         <!-- Gres szkliwiony Fiorino Arte 45 x 45 cm beżowy 1,61 m2  -->
         <!-- <img src="https://media.castorama.pl/media/catalog/product/G/r/Gres_szkliwiony_Fiorino_Arte_45_x_45_cm_bezowy_1_61_m2-418928-668995.webp" alt="" style="width: 200px;"> -->
     <!-- </main> -->
-    <div class="container">
-        <div class="menu">
-            <div id="cena">
-            </div>
-            <div class="wrapper-menu">
+    <div class="main">
+        <div class="container">
+            <div class="menu">
+                <div class="cena"></div>
                 <div class="mainMenu">
                     <p>Model płytek</p>
-                    <select name="plytki" id="plytki">
-                    </select>
+                    <select name="plytki" id="plytki"></select>
                     <p>Ilość m2</p>
                     <input type="text" name="" id="metry" placeholder="Podaj ilość m2">
                 </div>
-            </div>
-            <div class="wrapper-koszyk">
-                <div class="koszykText">
+                <div class="koszyk">
                     <p>Dodaj do koszyka</p>
                 </div>
             </div>
-        </div>
-        <div class="zdjecia">
-            <img src="" alt="Zdjecie plytek">
+            <img src="" alt="">
         </div>
     </div>
+        <footer>
+            <p>Aktualna godzina: <span class="zegarek"></span></p>
+        </footer>
+
     <script src="main.js"></script>
 </body>
 </html>
