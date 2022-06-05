@@ -5,36 +5,37 @@ document.addEventListener('DOMContentLoaded', () => {
     const metry = document.querySelector('#metry');
     const zegarek = document.querySelector('.zegarek')
     const cenaPojedyncza = document.querySelector('#cenaPojedyncza')
+    const opis = document.querySelector('.opis')
     const plytki = [
         jasnaPlytka= {
             name: 'Jasna plytka',
             price: 10.80,
             img: 'img/jasna.webp',
-            description: 'Jasna plytka z kolorowymi kreskami'
+            description: 'Jasna marmurowa płytka zapewniająca wytrzymałość na lata.'
         },
         ciemnaPlytka= {
             name: 'Ciemna plytka',
             price: 22.30,
             img: 'img/ciemna.webp',
-            description: 'Ciemna plytka z kolorowymi kreskami'
+            description: 'Ciemna marmurowa płytka zapewniająca utrzymywanie się koloru.'
         },
         zielonaPlytka= {
             name: 'Zielona plytka',
             price: 41.20,
             img: 'img/zielona.webp',
-            description: 'Zielona plytka z kolorowymi kreskami'
+            description: 'Zielona płytka z wyrzeźbionymi kwadratami.'
         },
         brazowaPlytka= {
             name: 'Brązowa plytka',
             price: 31.30,
             img: 'img/brazowa.webp',
-            description: 'Brązowa plytka z kolorowymi kreskami'
+            description: 'Brązowa marmurowa płytka zapewniająca wytrzymałość na lata.'
         },
         niebieskaPlytka= {
             name: 'Niebieska plytka',
             price: 32.50,
             img: 'img/niebieska.webp',
-            description: 'Niebieska plytka z kolorowymi kreskami'
+            description: 'Niebieska płytka z wyrzeźbionymi kwadratami.'
         },
     ]
     
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.style.width = '500px';
                     img.src = plytka.img;
                     img.alt = plytka.name;
-                    img.title = plytka.description;
+                    opis.innerText = plytka.description;
                     cenaPojedyncza.innerText = plytka.price;
                 }
             })
@@ -76,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (plytka.name == select.value){
                 img.src = plytka.img;
                 img.alt = plytka.name;
-                img.title = plytka.description;
+                opis.innerText = plytka.description;
                 cenaPojedyncza.innerText = plytka.price;
                 cena.innerText = `${plytka.price * metry.value} zł`;
             }
