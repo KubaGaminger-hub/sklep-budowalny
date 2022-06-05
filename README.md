@@ -1,3 +1,3 @@
 # castodrama
 
-https://kubagaminger-hub.github.io/castodrama/
+https://kubagaminger-hub.github.io/sklep-budowalny/
