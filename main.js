@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cena = document.querySelector('.cena');
     const metry = document.querySelector('#metry');
     const zegarek = document.querySelector('.zegarek')
+    const cenaPojedyncza = document.querySelector('#cenaPojedyncza')
     const plytki = [
         jasnaPlytka= {
             name: 'Jasna plytka',
@@ -53,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.src = plytka.img;
                     img.alt = plytka.name;
                     img.title = plytka.description;
+                    cenaPojedyncza.innerText = plytka.price;
                 }
             })
         }
@@ -75,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.src = plytka.img;
                 img.alt = plytka.name;
                 img.title = plytka.description;
+                cenaPojedyncza.innerText = plytka.price;
                 cena.innerText = `${plytka.price * metry.value} zł`;
             }
         })  
