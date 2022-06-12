@@ -52,6 +52,7 @@ nav li {
   margin: 0 100px;
   margin-top: 20px;
   list-style-position: inside;
+  margin-bottom: 5px;
 }
 nav .fa-cart-shopping {
   transform: scale(2);
@@ -112,7 +113,8 @@ nav .fa-cart-shopping {
   cursor: pointer;
 }
 .container img {
-  height: 500px;
+  height: 50%;
+  width: 25%;
 }
 
 footer {
