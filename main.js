@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const zegarek = document.querySelector('.zegarek')
     const cenaPojedyncza = document.querySelector('#cenaPojedyncza')
     const opis = document.querySelector('.opis')
+    const btn = document.querySelector('.koszyk')
+    const icon = document.querySelector('.icon')
     const plytki = [
         ciemnaPlytka= {
             name: 'Ciemna plytka',
@@ -48,6 +50,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Wyświetlanie ceny i metrów
     
     window.onload = () => {
+        if(localStorage.getItem('koszyk') == null){
+            localStorage.setItem('koszyk', JSON.stringify([]));
+        }
         if (select.value != null){
             plytki.forEach(function(plytka) {
                 if (plytka.name == select.value){
@@ -93,5 +98,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 cena.innerText = `${plytka.price * metry.value} zł`;
             }
         })    
+    })
+
+    // Dodawanie do koszyka
+    
+    btn.addEventListener('click', () => {
+        let koszyk = JSON.parse(localStorage.getItem('koszyk'));
+        koszyk.push(select.value, metry.value, cena.innerText);
+        localStorage.setItem('koszyk', JSON.stringify(koszyk));
+    })
+
+    // Wyświetlanie koszyka
+    icon.addEventListener('click', () => {
+        JSON.parse(localStorage.getItem('koszyk')).forEach((elem)=> {
+            console.log(elem)
+        })
     })
 })
