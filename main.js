@@ -7,34 +7,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const cenaPojedyncza = document.querySelector('#cenaPojedyncza')
     const opis = document.querySelector('.opis')
     const plytki = [
-        jasnaPlytka= {
-            name: 'Jasna plytka',
-            price: 10.80,
-            img: 'img/jasna.webp',
-            description: 'Jasna marmurowa płytka zapewniająca wytrzymałość na lata.'
-        },
         ciemnaPlytka= {
             name: 'Ciemna plytka',
             price: 22.30,
-            img: 'img/ciemna.webp',
+            img: 'img/ciemna.png',
             description: 'Ciemna marmurowa płytka zapewniająca utrzymywanie się koloru.'
+        },
+        jasnaPlytka= {
+            name: 'Jasna plytka',
+            price: 10.80,
+            img: 'img/jasna.png',
+            description: 'Jasna marmurowa płytka zapewniająca wytrzymałość na lata.'
         },
         zielonaPlytka= {
             name: 'Zielona plytka',
             price: 41.20,
-            img: 'img/zielona.webp',
+            img: 'img/zielona.png',
             description: 'Zielona płytka z wyrzeźbionymi kwadratami.'
         },
         brazowaPlytka= {
             name: 'Brązowa plytka',
             price: 31.30,
-            img: 'img/brazowa.webp',
+            img: 'img/brazowa.png',
             description: 'Brązowa marmurowa płytka zapewniająca wytrzymałość na lata.'
         },
         niebieskaPlytka= {
             name: 'Niebieska plytka',
             price: 32.50,
-            img: 'img/niebieska.webp',
+            img: 'img/niebieska.png',
             description: 'Niebieska płytka z wyrzeźbionymi kwadratami.'
         },
     ]
@@ -56,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     img.alt = plytka.name;
                     opis.innerText = plytka.description;
                     cenaPojedyncza.innerText = plytka.price;
+                    cena.innerText = `0 zł`;
                 }
             })
         }
