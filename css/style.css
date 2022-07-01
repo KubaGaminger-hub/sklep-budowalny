@@ -83,6 +83,9 @@ nav .fa-cart-shopping {
   flex-direction: column;
   border-radius: 10px;
 }
+.container .menu input, .container .menu select {
+  width: 50%;
+}
 .container .cena {
   display: flex;
   justify-content: center;

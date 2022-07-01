@@ -80,6 +80,9 @@ nav {
         background-color: var(--second-color);
         flex-direction: column;
         border-radius: 10px;
+        input, select {
+            width: 50%;
+        }
     }
     .cena {
         display: flex;
